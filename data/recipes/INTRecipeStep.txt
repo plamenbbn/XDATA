@@ -1,0 +1,31 @@
+RecipeID	ID	Name
+3	5	Purchase Urea Fertilizer
+3	6	Water
+3	7	Heat Water
+3	8	Dissolve Fertilizer
+3	9	Titrate Acid
+3	10	Purchase Nitric Acid
+3	11	Precipitate
+3	12	Filter
+3	13	Waste Disposal
+3	14	Spread out Tarps
+3	15	Pack
+3	16	Dry Outdoors
+3	17	Cache HME
+4	18	Purchase Urea Fertilizer
+4	19	Water
+4	20	Dissolve Fertilizer
+4	21	Purchase Potassium Nitrate
+4	22	Purchase HCl
+4	23	Heat
+4	24	Titrate Acid
+4	25	Mix HCl and KN
+4	26	Precipitate
+4	27	Filter
+4	28	Clear Building
+4	29	Waste Disposal
+4	30	Transfer wet HME to Building
+4	31	Pack Indoors
+4	32	Dry Indoors
+4	33	Cache HME
+

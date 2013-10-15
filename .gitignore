@@ -1,6 +1,17 @@
 *.class
 
 # Package Files #
-*.jar
 *.war
 *.ear
+
+bin/
+tmp/
+target/
+*.class
+*.out
+*.tsv.gz
+*.tmp
+Version.*
+*~
+.*/
+.DS_Store

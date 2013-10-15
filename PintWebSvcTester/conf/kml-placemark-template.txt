@@ -1,0 +1,11 @@
+      <Placemark>
+        <name>%1$s</name>
+        <styleUrl>#%2$s</styleUrl>
+        <description>%3$s</description>
+        <Point>
+          <coordinates>%4$s,%5$s,0</coordinates>
+        </Point>
+        <TimeStamp>
+          <when>%6$s</when>
+        </TimeStamp>
+      </Placemark>
