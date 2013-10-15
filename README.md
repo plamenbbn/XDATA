@@ -1,21 +1,21 @@
-Public PINT Repository
+Public BBN XDATA Repository
 ====
 
-Patterns In Near-real Time (PINT)
+Raytheon BBN's XDATA Repository
 
 Repository contents:
 
-1. PINT Algorithm for XDATA
-2. Twitter (XDATA format) adaptor for PINT
-3. BitCoin (transactions) adaptor for PINT
+1. PINT Algorithm and related test classes
+2. Graph Matching
+
 
 PINT is a fast, scalable, approximate algorithm for finding pre-defined patterns in large 
 datasets with temporal, geospatial, and semantic features.
 
+Graph Matching is a distributed algorithm for optimal matching of graphs
 
-This version of PINT is released under the Apache License Version 2.0. 
+This software is released under the Apache License Version 2.0. 
 
-All software is 
-Copyright (c) Raytheon BBN Technologies, 2009-2013.
+Copyright (c) Raytheon BBN Technologies, 2009-2013. All rights reserved.
 
 This work has been funded in part by the US Government. 
