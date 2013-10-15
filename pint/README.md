@@ -15,7 +15,7 @@ datasets with temporal, geospatial, and semantic features.
 
 This version of PINT is released under the Apache License Version 2.0. 
 
-All software is 
-Copyright (c) Raytheon BBN Technologies, 2009-2013.
+
+Copyright (c) Raytheon BBN Technologies, 2009-2013. All rights reserved.
 
 This work has been funded in part by the US Government. 
