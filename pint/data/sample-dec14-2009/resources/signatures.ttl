@@ -1,0 +1,169 @@
+@prefix :        <http://www.c2s2.jhuapl.edu/2009/10/01/signatures#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rnrm:    <http://www.c2s2.jhuapl.edu/2009/04/30/rnrm#> .
+
+rnrm:IntelligenceDiscipline
+      skos:altLabel "Intelligence Type"@en , "Intel Type"@en , "Int Type"@en ;
+      skos:example "Human Intelligence (HUMINT) is a collection discipline whereby intelligence is derived from information collected and provided by human sources."@en .
+
+:isSignatureOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :Signature ;
+      rdfs:label "Is Signature Of"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      owl:inverseOf :hasSignature ;
+      skos:definition "Associates an observable, event, or phenomena with a specific signature (measurable response)."@en ;
+      skos:prefLabel "Is Signature Of"@en .
+
+:Signature
+      a       owl:Class ;
+      rdfs:label "Signature"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      skos:definition "A measurable response from an observable."@en ;
+      skos:prefLabel "Signature"@en .
+
+:Phenomenology
+      a       owl:Class ;
+      rdfs:label "Phenomenology"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      skos:definition "Phenomenology is the scientific description of the physical or chemical process that produce signals that can transduced by detectors and then measured by sensors.  It is the knowledge that links common observations into a theory."@en , "The physical process or processes associated with an observable that produces a signature."@en ;
+      skos:example "Physical - Sunlight impinging on a material is selectively absorbed based on wavelength thereby producing a spectrum of specific wavelengths which is measured as color.  This is the phenomenology that describes why barrels are blue or black or yellow."@en , "Chemical - The instantaneous breaking of many chemical bonds in an unstable material produces photons and small hot gas molecules which manifest as heat and pressure from an explosion."@en ;
+      skos:prefLabel "Phenomenology"@en .
+
+:sensedBy
+      a       owl:ObjectProperty ;
+      rdfs:label "Sensed By"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      owl:inverseOf :senses ;
+      skos:prefLabel "Sensed By"@en .
+
+:PhenomenologyMeasurement
+      a       owl:Class ;
+      rdfs:label "Phenomenology Measurement"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string .
+
+:Sensor
+      a       owl:Class ;
+      rdfs:label "Sensor"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      skos:definition "A device that measures a signature and subsequently encodes it into a form that can interpreted by an observer or instrument."@en ;
+      skos:prefLabel "Sensor"@en .
+
+:senses
+      a       owl:ObjectProperty ;
+      rdfs:label "Senses"@en ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      owl:inverseOf :sensedBy ;
+      skos:prefLabel "Senses"@en .
+
+<http://www.c2s2.jhuapl.edu/2009/10/01/signatures>
+      a       owl:Ontology ;
+      rdfs:comment "Ontology for describing Signatures, the phenomenologies from which they are derived, and the sensors used to collect / measure them."@en ;
+      rnrm:classification "UNCLASSIFIED//FOUO"^^xsd:string ;
+      owl:imports <http://purl.org/dc/dcam/> , <http://purl.org/dc/elements/1.1/> , <http://www.w3.org/2004/02/skos/core> , <http://www.c2s2.jhuapl.edu/2009/04/30/rnrm> , <http://dublincore.org/2008/01/14/dctype.rdf> , <http://dublincore.org/2008/01/14/dcterms.rdf> ;
+      owl:versionInfo "1.0"^^xsd:string .
+
+:hasSignature
+      a       owl:ObjectProperty ;
+      rdfs:label "Has Signature"@en ;
+      rdfs:range :Signature ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string ;
+      owl:inverseOf :isSignatureOf ;
+      skos:definition "Associates an observable, event, or phenomena with a specific signature (measurable response)."@en ;
+      skos:prefLabel "Has Signature"@en .
+
+:hasPhenomenology
+      a       owl:ObjectProperty ;
+      rdfs:label "TEXT"^^xsd:string ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string .
+
+:hasPhenomenologyMeasurement
+      a       owl:ObjectProperty ;
+      rdfs:label "TEXT"^^xsd:string ;
+      rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	  
+:affectedByClouds a owl:DatatypeProperty;
+	rdfs:label "affected by clouds";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:allWeather a owl:DatatypeProperty;
+	rdfs:label "all weather";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:areaCoverage a owl:DatatypeProperty;
+	rdfs:label "area of coverage";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:spotCoverageArea a owl:DatatypeProperty;
+	rdfs:label "area of coverage - spot";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:dayNight a owl:DatatypeProperty;
+	rdfs:label "day or night";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+
+:durationOfCoverage a owl:DatatypeProperty;
+	rdfs:label "duration of coverage";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:dynamicallyRetaskable a owl:DatatypeProperty;
+	rdfs:label "dynamically retaskable";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:fieldOfView a owl:DatatypeProperty;
+	rdfs:label "field of view";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:fieldOfViewAcrossTrack a owl:DatatypeProperty;
+	rdfs:label "field of view across track";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:fieldOfViewAlongTrack a owl:DatatypeProperty;
+	rdfs:label "field of view along track";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:maxNIIRS a owl:DatatypeProperty;
+	rdfs:label "maximum NIIRS";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:minNIIRS a owl:DatatypeProperty;
+	rdfs:label "minimum NIIRS";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:nighttimeCollection a owl:DatatypeProperty;
+	rdfs:label "nighttime collection";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:searchResolution a owl:DatatypeProperty;
+	rdfs:label "search resolution";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:spotModelResolution a owl:DatatypeProperty;
+	rdfs:label "spot mode resolution";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+
+:searchResolutionNIIRS a owl:DatatypeProperty;
+	rdfs:label "search resolution NIIRS";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:spotModelResolutionNIIRS a owl:DatatypeProperty;
+	rdfs:label "spot mode resolution NIIRS";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:spectrumWavelengthMax a owl:DatatypeProperty;
+	rdfs:label "maximum spectrum/wavelength";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:spectrumWavelengthMin a owl:DatatypeProperty;
+	rdfs:label "minimum spectrum/wavelength";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+:totalFieldOfView a owl:DatatypeProperty;
+	rdfs:label "total field of view";
+	rnrm:classification "UNCLASSIFIED"^^xsd:string .
+	
+	

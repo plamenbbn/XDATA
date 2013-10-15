@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/" kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/ObservationExporter"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/process-alignment"/>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=PintWebSvcTester&amp;ivyXmlPath=ivy.xml&amp;confs=compile-ide"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/processfinder-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PintTestData"/>
+	<classpathentry kind="lib" path="lib/arpack_combo-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/c2s2-pp-1.0b6.jar"/>
+	<classpathentry kind="lib" path="lib/c2s2-pp-observations-1.0b6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-core-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/icu4j-3.4.4.jar"/>
+	<classpathentry kind="lib" path="lib/iri-0.7.jar"/>
+	<classpathentry kind="lib" path="lib/javaee-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/jena-2.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/json-20090211.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/mtj-0.9.12.jar"/>
+	<classpathentry kind="lib" path="lib/netlib-java-0.9.1.jar"/>
+	<classpathentry kind="lib" path="lib/obs-exporter-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/pint-client-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/process-alignment-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-jdk14-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-nop-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/webservices-rt-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

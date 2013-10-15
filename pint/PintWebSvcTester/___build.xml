@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Dec 16, 2009 11:15:50 AM                                                        
+
+     TemporalAlignment Tester
+     Loads the sample data sets into appropriate data structures for testing
+     temporal alignment algorithms
+                   
+     tself                                                                
+     ====================================================================== -->
+<project name="pint-websvc-tester" default="run-tests" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<!-- Location of main project root (not this Java project; the BBN project )
+	     This is likely to be the repository root -->
+	<property name="main.project.root.dir" location="../../.." />
+
+	<!-- ===== OVERRIDE PROPERTIES =====
+	     Override any properties in the abstract-ivy-build.xml file
+	     BEFORE importing it. Properties in ant are immutable.
+	     Example:
+	<property name="target.dir" value="new-target" />
+	 -->
+	<property name="executable.class.name" value="com.bbn.c2s2.pint.client.ui.MainFrame" />
+
+	<import file="${main.project.root.dir}/conf/abstract-ivy-build.xml" />
+
+	<property name="zip.file" value="${artifacts.dir}/pint-client.zip" />
+	<!-- ===== OVERRIDE TARGETS =====
+	     Override targets here (e.g. compile) -->
+	<target name="manifest" depends="retrieve">
+		<tstamp>
+			<format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss" />
+		</tstamp>
+
+		<manifestclasspath property="mf.class.path" jarfile="${target.dir}/ignore.jar">
+			<classpath>
+				<fileset dir="${target.dir}/${lib.dir}" includes="*.jar" />
+			</classpath>
+		</manifestclasspath>
+		<manifest file="${manifest.file}">
+			<attribute name="Built-By" value="BBN Technologies" />
+			<attribute name="Build-Date" value="${TODAY}" />
+			<attribute name="Main-Class" value="${executable.class.name}" />
+			<attribute name="Class-Path" value="${mf.class.path}" />
+		</manifest>
+	</target>
+	
+	<!-- Override JAR task to also create the deployable zip file -->
+	<target name="jar" depends="compile, manifest" description="Creates the Jar file and deployable zip">
+		<jar manifest="${manifest.file}" 
+			basedir="${build.dir}" 
+			file="${jar.file}" 
+			includes="**/*.class" />
+		
+		<!-- Make the zip file -->
+		<copy todir="${target.dir}">
+			<fileset dir="${config.dir}"/>
+			<fileset file="${jar.file}" />
+		</copy>
+		<zip file="${zip.file}">
+			<fileset dir="${target.dir}">
+				<include name="*.bat" />
+				<include name="*.properties" />
+				<include name="${lib.dir}/*.jar" />
+				<include name="*.jar" />
+			</fileset>
+		</zip>
+		
+		<!-- Deliver to the root artifacts -->
+		<mkdir dir="${root.artifacts.dir}" />
+		<copy todir="${root.artifacts.dir}">
+			<fileset file="${zip.file}" />
+		</copy>
+	</target>
+
+	<!-- ===== SUBPROJECT-SPECIFIC TARGETS =====
+	     Any targets specific to this subproject should go here
+	     (e.g. run-java-program ) -->
+	<target name="run" depends="compile" description="Runs the test client against the PINT enterprise server.">
+		<java classname="com.bbn.c2s2.pint.client.PintTestClient">
+			<classpath refid="resolved.class.path" />
+			<classpath path="${build.dir}" />
+		</java>
+	</target>
+
+	<target name="gui" depends="compile" description="Runs the graphical PINT test client.">
+		<java fork="true" classname="com.bbn.c2s2.pint.client.ui.MainFrame">
+			<jvmarg line="-Dpint.properties=conf/pint.properties"/>
+			<classpath refid="resolved.class.path" />
+			<classpath path="${build.dir}" />
+		</java>
+	</target>
+
+	<target name="deployable" depends="integration-build" description="Builds a deployable zip file for this project">
+		<copy todir="${target.dir}">
+			<fileset dir="${config.dir}"/>
+			<fileset file="${jar.file}" />
+		</copy>
+		<zip file="${zip.file}">
+			<fileset dir="${target.dir}">
+				<include name="*.bat" />
+				<include name="*.properties" />
+				<include name="${lib.dir}/*.jar" />
+				<include name="*.jar" />
+			</fileset>
+		</zip>
+	</target>
+</project>

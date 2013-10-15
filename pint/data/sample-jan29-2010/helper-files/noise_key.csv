@@ -1,0 +1,15 @@
+Design Parameter: Maximum Allowable Rows,100
+Design Parameter: Noise (%),10
+Design Parameter: Spatial Constraint (meter),10000
+Design Parameter: Temporal Constraint (day),14
+Total Rows,120
+Total Background,100
+Start Date,1/26/09
+End Date,3/12/09
+Total Noise,0
+Start Date,00/00/00
+End Date,00/00/00
+Total Ground Truth,20
+Start Date,2/3/09
+End Date,2/10/09
+Arrival Date,Arrival Time,Acquire Date,Acquire Time,Long,Lat,Observation,Role,

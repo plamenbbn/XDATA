@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.c2s2.jhuapl.edu/2009/04/30/rnrm#"
+    xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.c2s2.jhuapl.edu/2009/04/30/rnrm">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://purl.org/dc/dcmitype/"/>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://purl.org/dc/dcam/"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.1</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="FunctionalArea">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <skos:prefLabel xml:lang="en">Functional Area</skos:prefLabel>
+    <skos:example xml:lang="en">Leadership, Planning, Supply Chain, Support, or Execute.</skos:example>
+    <rdfs:label xml:lang="en">Functional Area</rdfs:label>
+    <skos:definition xml:lang="en">A descritpion of the function of a Red Node in the top level Red Nodal Reference Model (RNRM).</skos:definition>
+    <owl:oneOf rdf:parseType="Collection">
+      <FunctionalArea rdf:ID="Leadership">
+        <skos:prefLabel xml:lang="en">Leadership</skos:prefLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED//FOUO</classification>
+        <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1</nodeID>
+        <rdfs:label xml:lang="en">Leadership</rdfs:label>
+      </FunctionalArea>
+      <FunctionalArea rdf:ID="Planning">
+        <skos:prefLabel xml:lang="en">Planning</skos:prefLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED//FOUO</classification>
+        <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2</nodeID>
+        <rdfs:label xml:lang="en">Planning</rdfs:label>
+      </FunctionalArea>
+      <FunctionalArea rdf:ID="SupplyChain">
+        <skos:prefLabel xml:lang="en">Supply Chain</skos:prefLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED//FOUO</classification>
+        <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >3</nodeID>
+        <rdfs:label xml:lang="en">Supply Chain</rdfs:label>
+      </FunctionalArea>
+      <FunctionalArea rdf:ID="Support">
+        <skos:prefLabel xml:lang="en">Support</skos:prefLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED//FOUO</classification>
+        <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >4</nodeID>
+        <rdfs:label xml:lang="en">Support</rdfs:label>
+      </FunctionalArea>
+      <FunctionalArea rdf:ID="Execute">
+        <skos:prefLabel xml:lang="en">Execute</skos:prefLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED//FOUO</classification>
+        <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >5</nodeID>
+        <rdfs:label xml:lang="en">Execute</rdfs:label>
+      </FunctionalArea>
+    </owl:oneOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GeoTrend">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Geospatial Trend</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Trend"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Geospatial Trend</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Geocode">
+    <skos:definition xml:lang="en">Represents a discrete point in space.</skos:definition>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Geocode</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:ID="Media">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Media</skos:prefLabel>
+    <skos:definition xml:lang="en">A mechanism used to carry or store information.</skos:definition>
+    <rdfs:label xml:lang="en">Media</rdfs:label>
+    <skos:example xml:lang="en">JPEG, PNG, Text Document, Quicktime Movie, etc...</skos:example>
+    <skos:altLabel xml:lang="en">medium</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:ID="ForkElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProcessElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="JoinElement"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MergeElement"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Fork</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:ID="ActivityElement"/>
+              <owl:Class rdf:ID="DecisionElement"/>
+              <owl:Class rdf:ID="EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+              <owl:Class rdf:about="#JoinElement"/>
+              <owl:Class rdf:about="#MergeElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="StartStateElement"/>
+    </owl:disjointWith>
+    <skos:prefLabel xml:lang="en">Fork</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#ActivityElement">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#JoinElement"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ForkElement"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MergeElement"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#EndStateElement"/>
+    </owl:disjointWith>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ActivityElement"/>
+              <owl:Class rdf:about="#DecisionElement"/>
+              <owl:Class rdf:about="#EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+              <owl:Class rdf:about="#JoinElement"/>
+              <owl:Class rdf:about="#MergeElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DecisionElement"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StartStateElement"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessElement"/>
+    </rdfs:subClassOf>
+    <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Trend">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Trend</skos:prefLabel>
+    <rdfs:label xml:lang="en">Trend</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ParentProcess">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Parent Process</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Process"/>
+    </rdfs:subClassOf>
+    <skos:definition xml:lang="en">A process that contains another process.</skos:definition>
+    <rdfs:label xml:lang="en">Parent Process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Activity">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
+    <skos:example xml:lang="en">Grinding Corn</skos:example>
+    <skos:definition xml:lang="en">A distinct action that occurs in the real world that may or may not have associated observables.</skos:definition>
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Process">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:altLabel xml:lang="en">Process Flow</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Process</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Process-Flow</skos:altLabel>
+    <skos:definition xml:lang="en">Collection of ProcessFlowNode instances that together define a way of doing something.</skos:definition>
+    <rdfs:label xml:lang="en">Process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IntelligenceSubDiscipline">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Intelligence Sub-Discipline</skos:prefLabel>
+    <rdfs:label xml:lang="en">Intelligence Sub-Discipline</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Observation">
+    <skos:definition xml:lang="en">A discrete record of an observable at a particular place and time.</skos:definition>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Observation</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:ID="IntelligenceDiscipline">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Intelligence Discipline</skos:prefLabel>
+    <rdfs:label xml:lang="en">Collection Discipline</rdfs:label>
+    <skos:definition xml:lang="en">Means by which intelligence is gathered.</skos:definition>
+    <owl:oneOf rdf:parseType="Collection">
+      <IntelligenceDiscipline rdf:ID="CI">
+        <skos:altLabel xml:lang="en">Counter Intelligence</skos:altLabel>
+        <skos:prefLabel xml:lang="en">CI</skos:prefLabel>
+        <rdfs:label xml:lang="en">CI</rdfs:label>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="GEOINT">
+        <skos:altLabel xml:lang="en">Geospatial Intelligence</skos:altLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <skos:prefLabel xml:lang="en">GEOINT</skos:prefLabel>
+        <rdfs:label xml:lang="en">GEOINT</rdfs:label>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="HUMINT">
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <skos:prefLabel xml:lang="en">HUMINT</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Human Intelligence</skos:altLabel>
+        <skos:altLabel xml:lang="en">Human Intel</skos:altLabel>
+        <skos:definition xml:lang="en">A category of intelligence derived from information collected and provided by human sources.</skos:definition>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <rdfs:label xml:lang="en">HUMINT</rdfs:label>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="MASINT">
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <skos:prefLabel xml:lang="en">MASINT</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Measurement and Signature Intelligence</skos:altLabel>
+        <skos:altLabel xml:lang="en">Measurement and Signature Intel</skos:altLabel>
+        <skos:definition xml:lang="en">Scientific and technical intelligence derived from the analysis of data obtained from sensing instruments for the purpose of identifying any distinctive features associated with the source, emitter or sender, to facilitate the latter's measurement and identification.</skos:definition>
+        <rdfs:label xml:lang="en">MASINT</rdfs:label>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="OSINT">
+        <skos:altLabel xml:lang="en">Open Source Intelligence</skos:altLabel>
+        <skos:altLabel xml:lang="en">Open-Source Intel</skos:altLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <skos:prefLabel xml:lang="en">OSINT</skos:prefLabel>
+        <rdfs:label xml:lang="en">OSINT</rdfs:label>
+        <skos:altLabel xml:lang="en">Open-Source Intelligence</skos:altLabel>
+        <skos:altLabel xml:lang="en">Open Source Intel</skos:altLabel>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <skos:definition xml:lang="en">Intelligence derived from publicly available information, as well as other unclassified information that has limited public distribution or access.</skos:definition>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="SIGINT">
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <skos:prefLabel xml:lang="en">SIGINT</skos:prefLabel>
+        <skos:definition xml:lang="en">The generic term used to describe communications intelligence and electronic intelligence when there is no requirement to differentiate between these two types of intelligence, or to represent fusion of the two.</skos:definition>
+        <skos:altLabel xml:lang="en">Signals Intelligence</skos:altLabel>
+        <skos:altLabel xml:lang="en">Signals Intel</skos:altLabel>
+        <rdfs:label xml:lang="en">SIGINT</rdfs:label>
+      </IntelligenceDiscipline>
+      <IntelligenceDiscipline rdf:ID="TECHINT">
+        <skos:altLabel xml:lang="en">Technical Intelligence</skos:altLabel>
+        <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >UNCLASSIFIED</classification>
+        <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+        <skos:prefLabel xml:lang="en">TECHINT</skos:prefLabel>
+        <rdfs:label xml:lang="en">TECHINT</rdfs:label>
+      </IntelligenceDiscipline>
+    </owl:oneOf>
+  </owl:Class>
+  <owl:Class rdf:about="#EndStateElement">
+    <owl:disjointWith rdf:resource="#ForkElement"/>
+    <rdfs:label xml:lang="en">End State</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StartStateElement"/>
+    </owl:disjointWith>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">End State</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessElement"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#JoinElement"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MergeElement"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#JoinElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MergeElement"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ActivityElement"/>
+              <owl:Class rdf:about="#DecisionElement"/>
+              <owl:Class rdf:about="#EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+              <owl:Class rdf:about="#JoinElement"/>
+              <owl:Class rdf:about="#MergeElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <skos:prefLabel xml:lang="en">Joint</skos:prefLabel>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StartStateElement"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Join</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OracleImport">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Oracle Import</skos:prefLabel>
+    <rdfs:label xml:lang="en">Oracle Import</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Provenance"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SocioTrend">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Social Trend</skos:prefLabel>
+    <rdfs:subClassOf rdf:resource="#Trend"/>
+    <rdfs:label xml:lang="en">Social Trend</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SubProcess">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Sub-Process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Sub-Process</skos:prefLabel>
+    <skos:definition xml:lang="en">A process that is completely contained by at least one other complete process.</skos:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#MergeElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessElement"/>
+    </rdfs:subClassOf>
+    <skos:prefLabel xml:lang="en">Merge</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ActivityElement"/>
+              <owl:Class rdf:about="#DecisionElement"/>
+              <owl:Class rdf:about="#EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+              <owl:Class rdf:about="#JoinElement"/>
+              <owl:Class rdf:about="#MergeElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StartStateElement"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Merge</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#StartStateElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessElement"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Start State</rdfs:label>
+    <skos:prefLabel xml:lang="en">Start State</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ActivityElement"/>
+              <owl:Class rdf:about="#DecisionElement"/>
+              <owl:Class rdf:about="#EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ProcessElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Process Flow Node</rdfs:label>
+    <skos:prefLabel xml:lang="en">Process Element</skos:prefLabel>
+    <skos:definition xml:lang="en">Any UML activity diagram construct such as a a start state, an activity, or an end state.</skos:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#Provenance">
+    <dcterms:description xml:lang="en">Provenance can be used as a value container to account for the origin of some set of information.  Recommended best practice is to create an instance of Provenance and use properties from the dcterms vocabulary to describe the origin of the information being described.</dcterms:description>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Provenance</skos:prefLabel>
+    <rdfs:label xml:lang="en">Provenance</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#DecisionElement">
+    <owl:disjointWith rdf:resource="#EndStateElement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isFlowingTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#ActivityElement"/>
+              <owl:Class rdf:about="#DecisionElement"/>
+              <owl:Class rdf:about="#EndStateElement"/>
+              <owl:Class rdf:about="#ForkElement"/>
+              <owl:Class rdf:about="#JoinElement"/>
+              <owl:Class rdf:about="#MergeElement"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#ProcessElement"/>
+    <skos:prefLabel xml:lang="en">Decision</skos:prefLabel>
+    <owl:disjointWith rdf:resource="#ForkElement"/>
+    <owl:disjointWith rdf:resource="#StartStateElement"/>
+    <rdfs:label xml:lang="en">Decision</rdfs:label>
+    <owl:disjointWith rdf:resource="#MergeElement"/>
+    <owl:disjointWith rdf:resource="#JoinElement"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:Class rdf:ID="Observable">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:definition xml:lang="en">A notional reference to a real-worl object, such as a truck, the chemical chlorine, or an individual.  Observables are typically nouns.</skos:definition>
+    <skos:prefLabel xml:lang="en">Observable</skos:prefLabel>
+    <rdfs:label xml:lang="en">Observable</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ChildProcess">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Child Process</skos:prefLabel>
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <skos:definition xml:lang="en">Direct subprocess of another process.  Any sub process is also a child process.</skos:definition>
+    <rdfs:label xml:lang="en">Child Process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SuperProcess">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Super-Process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Super-Process</skos:prefLabel>
+    <skos:definition xml:lang="en">A process that completely contains at least one other complete process.</skos:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="RedNode">
+    <skos:definition xml:lang="en">The high level Red Nodal Diagram "functions" that must be fulfilled to complete a process.</skos:definition>
+    <rdfs:label xml:lang="en">Red Node</rdfs:label>
+    <skos:prefLabel xml:lang="en">Red Node</skos:prefLabel>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <skos:example xml:lang="en">Assessment, Component Supply, Egress, and International Support.</skos:example>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#isFlowingTo">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Is Flowing To</skos:prefLabel>
+    <rdfs:label xml:lang="en">Is Flowing To</rdfs:label>
+    <rdfs:domain rdf:resource="#ProcessElement"/>
+    <rdfs:range rdf:resource="#ProcessElement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isObservationOf">
+    <skos:prefLabel xml:lang="en">Is Observation Of</skos:prefLabel>
+    <skos:definition xml:lang="en">Asssociates an Observation with an observable.</skos:definition>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#Observable"/>
+    <rdfs:domain rdf:resource="#Observation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isObservedBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isRepresentedByActivityElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Is Represented By Activity</rdfs:label>
+    <rdfs:comment xml:lang="en">Use this property to indicate ActivityElements that represent an Activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Activity"/>
+    <rdfs:range rdf:resource="#ActivityElement"/>
+    <skos:prefLabel xml:lang="en">Is Represented By Activity</skos:prefLabel>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="representsActivity"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isElementOf">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasElement"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#ProcessElement"/>
+    <rdfs:label xml:lang="en">Is Element Of</rdfs:label>
+    <skos:definition xml:lang="en">Indicates that an rnrm:Element is a member of an rnrm:Process.</skos:definition>
+    <rdfs:range rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Is Element Of</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasOriginatingSource">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <dcterms:description xml:lang="en">In other words, the earliest known (or originating) source of information about the described resource is the related resource.  Best practice is to identify the related resource as a Provenance instance which is further described using the dcterms vocabulary.</dcterms:description>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isPersonnelFlowingTo">
+    <skos:prefLabel xml:lang="en">Is Personnell Flowing To</skos:prefLabel>
+    <rdfs:subPropertyOf rdf:resource="#isFlowingTo"/>
+    <rdfs:label xml:lang="en">Is Personnell Flowing To</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasIntelligenceDiscipline">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#IntelligenceDiscipline"/>
+    <rdfs:label xml:lang="en">Has Intelligence Discipline</rdfs:label>
+    <skos:definition xml:lang="en">Associates a piece of intelligence data with a recognized intelligence discipline.</skos:definition>
+    <skos:prefLabel xml:lang="en">Has Intelligence Discipline</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasObservable">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:domain rdf:resource="#Activity"/>
+    <skos:definition xml:lang="en">Associates an activity with an observable.</skos:definition>
+    <rdfs:label xml:lang="en">Has Observable</rdfs:label>
+    <rdfs:range rdf:resource="#Observable"/>
+    <skos:prefLabel xml:lang="en">Has Observable</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isInformationFlowingTo">
+    <skos:prefLabel xml:lang="en">Is Information Flowing To</skos:prefLabel>
+    <rdfs:subPropertyOf rdf:resource="#isFlowingTo"/>
+    <rdfs:label xml:lang="en">Is Information Flowing To</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isMoneyFlowingTo">
+    <skos:prefLabel xml:lang="en">Is Mondy Flowing To</skos:prefLabel>
+    <rdfs:subPropertyOf rdf:resource="#isFlowingTo"/>
+    <rdfs:label xml:lang="en">Is Mondy Flowing To</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasGeocode">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has Geocode</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has Geocode</skos:prefLabel>
+    <rdfs:range rdf:resource="#Geocode"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasChildProcess">
+    <rdfs:domain rdf:resource="#ParentProcess"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasParentProcess"/>
+    </owl:inverseOf>
+    <skos:prefLabel xml:lang="en">Has Child Process</skos:prefLabel>
+    <skos:definition xml:lang="en">Associates a parent process with its immediate descendant(s).</skos:definition>
+    <rdfs:domain rdf:resource="#SuperProcess"/>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:range rdf:resource="#ChildProcess"/>
+    <rdfs:range rdf:resource="#SubProcess"/>
+    <rdfs:label xml:lang="en">Has Child Process</rdfs:label>
+    <rdfs:domain rdf:resource="#Process"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasElement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:definition xml:lang="en">Associates a process with its constituent process elements.</skos:definition>
+    <rdfs:label xml:lang="en">Has Element</rdfs:label>
+    <rdfs:range rdf:resource="#ProcessElement"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Has Element</skos:prefLabel>
+    <owl:inverseOf rdf:resource="#isElementOf"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contains">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Contains</rdfs:label>
+    <skos:prefLabel xml:lang="en">Contains</skos:prefLabel>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="containedBy"/>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">Generic container property for describing Bag / Collection type relationships.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasTrend">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has Trend</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has Trend</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isMaterialFlowingTo">
+    <skos:prefLabel xml:lang="en">Is Material Flowing To</skos:prefLabel>
+    <rdfs:subPropertyOf rdf:resource="#isFlowingTo"/>
+    <rdfs:label xml:lang="en">Is Material Flowing To</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#representsActivity">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <owl:inverseOf rdf:resource="#isRepresentedByActivityElement"/>
+    <rdfs:label xml:lang="en">Represents Activity</rdfs:label>
+    <rdfs:comment xml:lang="en">Use this property to indicate the Activity represented by an ActivityElement.</rdfs:comment>
+    <rdfs:domain rdf:resource="#ActivityElement"/>
+    <rdfs:range rdf:resource="#Activity"/>
+    <skos:prefLabel xml:lang="en">Represents Activity</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFileUrl">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has File URL</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has File URL</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isObservedBy">
+    <skos:prefLabel xml:lang="en">Is Observed By</skos:prefLabel>
+    <skos:definition xml:lang="en">Associates an Observable with an Observation.</skos:definition>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#Observation"/>
+    <rdfs:domain rdf:resource="#Observable"/>
+    <owl:inverseOf rdf:resource="#isObservationOf"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isTargetsFlowingTo">
+    <skos:prefLabel xml:lang="en">Is Targets Flowing To</skos:prefLabel>
+    <rdfs:subPropertyOf rdf:resource="#isFlowingTo"/>
+    <rdfs:label xml:lang="en">Is Targets Flowing To</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isStartElementOf">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subPropertyOf rdf:resource="#isElementOf"/>
+    <rdfs:label xml:lang="en">Is Start Element Of</rdfs:label>
+    <rdfs:domain rdf:resource="#ProcessElement"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasStartElement"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Is Start Element Of</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasStartElement">
+    <skos:definition xml:lang="en">Associates a process with its first process element.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Has Start Element</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasElement"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <owl:inverseOf rdf:resource="#isStartElementOf"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#ProcessElement"/>
+    <skos:prefLabel xml:lang="en">Has Start Element</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMedia">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has Media</rdfs:label>
+    <rdfs:range rdf:resource="#Media"/>
+    <skos:definition xml:lang="en">Used to associate a resource with a multimedia file such as an image or a video.</skos:definition>
+    <skos:prefLabel xml:lang="en">Has Media</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEndElement">
+    <skos:definition xml:lang="en">Associates a process with the last process element.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <skos:prefLabel xml:lang="en">Has End Element</skos:prefLabel>
+    <rdfs:label xml:lang="en">Has End Element</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#ProcessElement"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isEndElementOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="#hasElement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#containedBy">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Contained By</rdfs:label>
+    <skos:prefLabel xml:lang="en">Contained By</skos:prefLabel>
+    <owl:inverseOf rdf:resource="#contains"/>
+    <skos:definition xml:lang="en">Generic container property for describing Bag / Collection type relationships.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isEndElementOf">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:subPropertyOf rdf:resource="#isElementOf"/>
+    <rdfs:label xml:lang="en">Is End Element Of</rdfs:label>
+    <owl:inverseOf rdf:resource="#hasEndElement"/>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#ProcessElement"/>
+    <skos:prefLabel xml:lang="en">Is End Element Of</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasParentProcess">
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#ChildProcess"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:range rdf:resource="#SuperProcess"/>
+    <rdfs:range rdf:resource="#ParentProcess"/>
+    <skos:prefLabel xml:lang="en">Has Parent Process</skos:prefLabel>
+    <rdfs:domain rdf:resource="#SubProcess"/>
+    <skos:definition xml:lang="en">Associates a child process with its parent process.</skos:definition>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has Parent Process</rdfs:label>
+    <owl:inverseOf rdf:resource="#hasChildProcess"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFunctionalArea">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <rdfs:label xml:lang="en">Has Functional Area</rdfs:label>
+    <rdfs:range rdf:resource="#FunctionalArea"/>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates an individual in the Red Nodal Reference Model (RNRM) with one of the 5 core RNRM functional areas.</skos:definition>
+    <skos:prefLabel xml:lang="en">Has Functional Area</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFileType">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label xml:lang="en">Has File Type</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has File Type</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasMinDuration">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:definition xml:lang="en">A minimum of amount of time (in milliseconds) for some aspect of the described resource.</skos:definition>
+    <skos:prefLabel xml:lang="en">Mas Min Duration</skos:prefLabel>
+    <rdfs:label xml:lang="en">Mas Minimum Duration</rdfs:label>
+    <skos:example xml:lang="en">The fastest the race was run in was 30000 ms.</skos:example>
+    <skos:example xml:lang="en">The half life of uranium 232 is 2172830400000 ms.</skos:example>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#Activity"/>
+    <skos:example xml:lang="en">The minimum amount of time required to bake a cake is 1800000 ms.</skos:example>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLongitude">
+    <skos:definition xml:lang="en">Longitude of a resource expressed in decimal degrees using the WGS 84 revision of the World Geodetic System.</skos:definition>
+    <dcterms:references rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://en.wikipedia.org/wiki/World_Geodetic_System</dcterms:references>
+    <skos:prefLabel xml:lang="en">Has Longitude</skos:prefLabel>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <dcterms:references rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html</dcterms:references>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAltitude">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLatitude">
+    <skos:definition xml:lang="en">Longitude of a resource expressed in decimal degrees using the WGS 84 revision of the World Geodetic System.</skos:definition>
+    <dcterms:references rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html</dcterms:references>
+    <skos:prefLabel xml:lang="en">Has Latitude</skos:prefLabel>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <dcterms:references rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://en.wikipedia.org/wiki/World_Geodetic_System</dcterms:references>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSqlId">
+    <skos:prefLabel xml:lang="en">Has SQL ID</skos:prefLabel>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:domain rdf:resource="#OracleImport"/>
+    <rdfs:label xml:lang="en">Has SQL ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMaxDuration">
+    <rdfs:domain rdf:resource="#Activity"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <skos:example xml:lang="en">The maximum amount of time you can bake a cake before it burns is 1800000 ms.</skos:example>
+    <skos:definition xml:lang="en">A maximum of amount of time (in milliseconds) for some aspect of the described resource.</skos:definition>
+    <skos:prefLabel xml:lang="en">Has Max Duration</skos:prefLabel>
+    <skos:example xml:lang="en">The half life of uranium 232 is 2172830400000 ms.</skos:example>
+    <rdfs:label xml:lang="en">Has Maximum Duration</rdfs:label>
+    <skos:example xml:lang="en">The maximum allowed time to complete the test is 30000 ms.</skos:example>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCreationDatetime">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOrsaTrend">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has ORSA Trend</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has ORSA Trend</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCreator">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasObservationDatetime">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Has Observation Timestamp</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:ID="hasIntelligenceSubDiscipline">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:domain rdf:resource="#IntelligenceDiscipline"/>
+    <rdfs:label xml:lang="en">Has Intelligence Sub Discipline</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has Intelligence Sub Discipline</skos:prefLabel>
+    <rdfs:range rdf:resource="#IntelligenceSubDiscipline"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="hasSuperProcess">
+    <skos:definition xml:lang="en">A process that is contained entirely by at least one other complete process.</skos:definition>
+    <rdfs:range rdf:resource="#SuperProcess"/>
+    <rdfs:label xml:lang="en">Has Super Process</rdfs:label>
+    <skos:prefLabel xml:lang="en">Has Super Process</skos:prefLabel>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#SubProcess"/>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:ID="hasSubProcess"/>
+    </owl:inverseOf>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#hasSubProcess">
+    <skos:prefLabel xml:lang="en">Has Sub-Process</skos:prefLabel>
+    <owl:inverseOf rdf:resource="#hasSuperProcess"/>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:range rdf:resource="#SubProcess"/>
+    <skos:definition xml:lang="en">A process that is contained entirely by at least one other complete process.</skos:definition>
+    <rdfs:domain rdf:resource="#SuperProcess"/>
+    <rdfs:label xml:lang="en">Has Sub Process</rdfs:label>
+  </owl:TransitiveProperty>
+  <RedNode rdf:ID="PostDetonationIO">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4.2</nodeID>
+    <rdfs:label xml:lang="en">Post Detonation IO</rdfs:label>
+    <skos:prefLabel xml:lang="en">Post Detonation IO</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Support"/>
+  </RedNode>
+  <RedNode rdf:ID="Inventory">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3.4</nodeID>
+    <rdfs:label xml:lang="en">Inventory</rdfs:label>
+    <skos:prefLabel xml:lang="en">Inventory</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#SupplyChain"/>
+  </RedNode>
+  <RedNode rdf:ID="Observe">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.6</nodeID>
+    <rdfs:label xml:lang="en">Observe</rdfs:label>
+    <skos:prefLabel xml:lang="en">Observe</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <owl:AnnotationProperty rdf:ID="classification">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >classification</rdfs:label>
+    <skos:example xml:lang="en">UNCLASSIFIED</skos:example>
+    <skos:definition xml:lang="en">The Department of Defense (DoD) or Intelligence Community (IC) classification level of a resource.</skos:definition>
+  </owl:AnnotationProperty>
+  <RedNode rdf:ID="DetectAndDetonate">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.5</nodeID>
+    <rdfs:label xml:lang="en">Detect and Detonate</rdfs:label>
+    <skos:prefLabel xml:lang="en">Detect and Detonate</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <RedNode rdf:ID="Emplacement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.2</nodeID>
+    <rdfs:label xml:lang="en">Emplacement</rdfs:label>
+    <skos:prefLabel xml:lang="en">Emplacement</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <RedNode rdf:ID="Ingress">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.1</nodeID>
+    <rdfs:label xml:lang="en">Ingress</rdfs:label>
+    <skos:prefLabel xml:lang="en">Ingress</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <RedNode rdf:ID="LocalLeadership">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.3</nodeID>
+    <rdfs:label xml:lang="en">Local Leadership</rdfs:label>
+    <skos:prefLabel xml:lang="en">Local Leadership</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Leadership"/>
+  </RedNode>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+  <IntelligenceDiscipline rdf:ID="IMINT">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+    <skos:prefLabel xml:lang="en">IMINT</skos:prefLabel>
+    <rdfs:label xml:lang="en">IMINT</rdfs:label>
+  </IntelligenceDiscipline>
+  <RedNode rdf:ID="Procurement">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3.1</nodeID>
+    <rdfs:label xml:lang="en">Procurement</rdfs:label>
+    <skos:prefLabel xml:lang="en">Procurement</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#SupplyChain"/>
+  </RedNode>
+  <RedNode rdf:ID="Storage">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3.2</nodeID>
+    <rdfs:label xml:lang="en">Storage</rdfs:label>
+    <skos:prefLabel xml:lang="en">Storage</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#SupplyChain"/>
+  </RedNode>
+  <owl:AnnotationProperty rdf:ID="nodeID">
+    <rdfs:label xml:lang="en">Node ID</rdfs:label>
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <skos:prefLabel xml:lang="en">Node ID</skos:prefLabel>
+  </owl:AnnotationProperty>
+  <RedNode rdf:ID="ComponentSupply">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3.5</nodeID>
+    <rdfs:label xml:lang="en">Component Supply</rdfs:label>
+    <skos:prefLabel xml:lang="en">Component Supply</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#SupplyChain"/>
+  </RedNode>
+  <RedNode rdf:ID="Recruiting">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.1</nodeID>
+    <skos:prefLabel xml:lang="en">Recruiting</skos:prefLabel>
+    <rdfs:label xml:lang="en">Recruiting</rdfs:label>
+    <hasFunctionalArea rdf:resource="#Planning"/>
+  </RedNode>
+  <RedNode rdf:ID="NationalAndRegionalLeadership">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.2</nodeID>
+    <rdfs:label xml:lang="en">National and Regional Leadership</rdfs:label>
+    <skos:prefLabel xml:lang="en">National and Regional Leadership</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Leadership"/>
+  </RedNode>
+  <RedNode rdf:ID="AdaptationResearchAndDevelopment">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.4</nodeID>
+    <rdfs:label xml:lang="en">Adaptation / Research &amp; Development</rdfs:label>
+    <skos:prefLabel xml:lang="en">Adaptation / Research &amp; Development</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Planning"/>
+  </RedNode>
+  <IntelligenceDiscipline rdf:ID="COMINT">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED</classification>
+    <dc:source xml:lang="en">NATO Glossary of Terms and Definitions (AAP-6 2009)</dc:source>
+    <skos:altLabel xml:lang="en">communications intelligence</skos:altLabel>
+    <skos:prefLabel xml:lang="en">COMINT</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Communications Intel</skos:altLabel>
+    <skos:definition xml:lang="en">Intelligence derived from electromagnetic communications and communication systems by other than intended recipients or users.</skos:definition>
+    <rdfs:label xml:lang="en">COMINT</rdfs:label>
+  </IntelligenceDiscipline>
+  <RedNode rdf:ID="Surveillance">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.3</nodeID>
+    <rdfs:label xml:lang="en">Surveillance</rdfs:label>
+    <skos:prefLabel xml:lang="en">Surveillance</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Planning"/>
+  </RedNode>
+  <RedNode rdf:ID="Egress">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.3</nodeID>
+    <rdfs:label xml:lang="en">Egress</rdfs:label>
+    <skos:prefLabel xml:lang="en">Egress</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <RedNode rdf:ID="IEDManufacturing">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3.3</nodeID>
+    <rdfs:label xml:lang="en">IED Manufacturing</rdfs:label>
+    <skos:prefLabel xml:lang="en">IED Manufacturing</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#SupplyChain"/>
+  </RedNode>
+  <RedNode rdf:ID="Training">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.2</nodeID>
+    <rdfs:label xml:lang="en">Training</rdfs:label>
+    <skos:prefLabel xml:lang="en">Training</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Planning"/>
+  </RedNode>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+  <RedNode rdf:ID="InternationalSupport">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.1</nodeID>
+    <rdfs:label xml:lang="en">International Support</rdfs:label>
+    <skos:prefLabel xml:lang="en">International Support</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Leadership"/>
+  </RedNode>
+  <RedNode rdf:ID="MonitorAndArm">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.4</nodeID>
+    <rdfs:label xml:lang="en">Monitor and Arm</rdfs:label>
+    <skos:prefLabel xml:lang="en">Monitor and Arm</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+  <RedNode rdf:ID="DomesticSupport">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4.1</nodeID>
+    <rdfs:label xml:lang="en">Domestic Support</rdfs:label>
+    <skos:prefLabel xml:lang="en">Domestic Support</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Support"/>
+  </RedNode>
+  <RedNode rdf:ID="Assessment">
+    <classification rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNCLASSIFIED//FOUO</classification>
+    <nodeID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5.7</nodeID>
+    <rdfs:label xml:lang="en">Assessment</rdfs:label>
+    <skos:prefLabel xml:lang="en">Assessment</skos:prefLabel>
+    <hasFunctionalArea rdf:resource="#Execute"/>
+  </RedNode>
+</rdf:RDF>
+
+<!-- Created with TopBraid Composer -->

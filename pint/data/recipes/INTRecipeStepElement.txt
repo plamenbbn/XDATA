@@ -1,0 +1,84 @@
+INTRecipeStepID	SequenceNumber	Name
+5	1	CC Purchase from Company UF Inc
+5	2	Procurement Personnel
+5	3	Urea chemical signature
+6	1	Pump from Well
+6	2	Fill Jugs
+6	3	Fill Truck
+7	1	Metal barrels
+7	2	Propane Burner
+8	1	Large Plastic barrels
+8	2	Mixing Devices
+8	3	Urea chemical signature
+8	4	HME Personnel
+9	1	Large Plastic barrels
+9	2	HME Personnel
+9	3	7 Gal Black Plastic Jugs
+10	1	7 Gal Black Plastic Jugs
+10	2	CC Purchase from Company NA Inc
+10	3	Procurement Personnel
+11	1	Large Plastic barrels
+11	2	HME Personnel
+11	3	Mixing Devices
+12	1	Large Plastic barrels
+12	2	Slurry
+12	3	HME Personnel
+13	1	Large Plastic barrels
+13	2	Waster water
+14	1	Plastic barrels
+14	2	Tarps
+14	3	UN Chemical Signature
+15	1	Empty Fertilizer Bags
+15	2	Full Fertilizer Bags
+15	3	Shovels
+16	1	Empty Plastic barrels
+16	2	UN Chemical Signature
+16	3	Security Personnel
+17	1	Buried Item
+17	2	Full Fertilizer Bags
+17	3	Workers
+18	1	CC Purchase from Company UF Inc
+18	2	Procurement Personnel
+18	3	Urea chemical signature
+19	1	Pump from Well
+19	2	Fill Jugs
+19	3	Fill Truck
+20	1	Large Mixing container
+20	2	Mixing articles
+20	3	Urea chemical signature
+21	1	Large Plastic barrels
+21	2	CC Purchase from Company KN Inc
+21	3	Procurement Personnel
+22	1	Green Plastic Jugs
+22	2	CC Purchase from Company HCL Inc
+22	3	Procurement Personnel
+23	1	Large Metal kettle
+23	2	Propane Burner
+24	1	Large Metal kettle
+24	2	HME Personnel
+25	1	Large Plastic barrels
+25	2	Chemical Signature of Cl
+26	1	Large Plastic barrels
+26	2	Slurry
+26	3	Mixing Devices
+26	4	HME Personnel
+27	1	Empty Metal kettle
+27	2	Slurry
+27	3	HME Personnel
+28	1	Security Personnel
+28	2	Change in traffic
+28	3	Wide security perimeter
+29	1	Large Plastic barrels
+29	2	Waster water
+30	1	Wheel barrels
+30	2	Manual Labor
+30	3	Moving Bulk item indoors
+31	1	HME Personnel
+31	2	Load Box Truck
+32	1	Empty Metal kettle
+32	2	UN Chemical Signature
+32	3	Abandoned Building
+33	1	Buried Item
+33	2	Full Fertilizer Bags
+33	3	Workers
+
