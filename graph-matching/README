@@ -1,0 +1,71 @@
+/////////////
+General:
+/////////////
+
+This software provides a parallel implemenation of an approximate graph matching algorithm proposed by Fishkind, Adali,
+and Priebe (2012).  
+
+The general goal of graph matching is to find a permutation matrix that shows the optimum alignment of one graph to another.  
+
+Our implementation currently uses a combination of hadoop for the matrix operations and giraph for the auction algorithm,
+an approach to the linear sum assignement problem proposed by Bertsekas.  The hadoop implements a basic block cyclic structure, and 
+JNI calls are used for the sub-computation.  These are currently provided by the Jblas library.  We plan to translate this general 
+structure into giraph or similar code that will provide more speed.  
+
+/////////////////
+Installation:
+/////////////////
+
+The code requires a giraph jar, a jblas jar, and a hadoop jar.  We'll add this for maven - but for now it takes the locations
+of the jars.  For development, the giraph jar used is the giraph 1.0.0 compiled against
+hadoop-2.0.0.mr1.4.2.0 jar that is available at the giraph xdata wiki page.   
+
+The 'compile.pl' script can be called as follows:
+perl compile.pl <hadoop jar path> <giraph jar path> <jblas jar path>.  
+
+The inputs maybe single jars or colon-separated paths
+
+This creates a jar named graph-matching.jar in a created target folder.  
+
+///////////////
+Input/Output
+///////////////
+
+-Input A and B are edge lists files containing lines of the form <i><delim><j><delim><val>\n
+-Output - the output is the edge list for the permutation matrix in the same format.
+
+Sample Input/Output:  
+
+The text files A and B show the desired input format, while the file C shows the output.
+The run script was used to produce the outut after 1 iteration.
+
+///////////////
+Running:
+///////////////
+
+The provided 'unseeded.pl' will run unseeded graph matching.  
+The usage is:
+
+./unseeded.pl inputA inputB Output [options]
+
+Options:
+
+-giraph: location of giraph jar (required)
+-jblas: location of giraph jar (required)
+-libgfortran: location of libgfortran.so.3 shared library (required)
+-zoo: address of the zookeper service - the default is <host>:2181 (required)
+-temp: temperary hdfs directory to write intermediate products (required)
+-iter: number of iterations for full algorithm (defaults to 20)
+-delim: delimeter in matrix (defaults to ",")
+-n: size of input matrix - currently assumes square matrices (if not add zeros) (required)
+-nr: number of row blocks (defaults to 1)
+-nc: number of column blocks (defaults to 1)
+-e: slack variable for auction algorithm (defaults to DOUBLE_MIN)
+-auction_iter: maximum number of auction iterations (defaults to 1000000)
+-reducers: number of reducers (defaults to 8)
+
+The run.sh script demonstrates the usage.  The giraph jar should be added to the 
+hadoop classpath, which can be accomplished by (bash):
+
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:/usr/lib/giraph/giraph-jar-with-dependencies.jar
+

@@ -1,0 +1,54 @@
+//////////////////////
+General
+//////////////////////
+
+This package provides a hadoop job that parses a csv file with the goal of creating
+a sequence file of text entries
+
+////////////////////////
+Requirements/Building
+///////////////////////
+
+The code requires an appropriate hadoop installation
+
+The 'build.pl' script will compile the java code and create a jar file
+The only input to this is the path to the hadoop jar(s)
+
+./build.pl <hadoop-jar-path>
+
+//////////////////////
+Input / Output
+/////////////////////
+
+The input format currently supported is a token separated file that resides in hdfs
+The output is a sequence file of the form <null>\t<text field>
+
+//////////////////////
+Running
+//////////////////////
+
+The perl script 'run.pl' takes the following non-flagged parameters (in order):
+hdfs-path-to-input (required):
+	an HDFS directory or glob containing the token-separated file
+hdfs-output-dir (required)
+	HDFS directory to store output
+
+And the following flagged parameters:
+
+-delim (required - defaults to \t)
+	the token separating the data fields of the input file
+-col (required - defaults to 0)
+	the column of the desired text field (0-indexed)
+-reducers (optional - defaults to 1)
+	number of hadoop reduce jobs
+-cond (optional)
+	conditions as for what entries will be printed.  the format is <column>:<value>.  This currently only supports string matching,
+	but can easily be extended to other logic
+	
+//////////////////////////
+Example
+/////////////////////////
+
+The following call was used to create a file of loan descriptions from peru from a csv file parsed from the json
+
+./run.pl /user/dgainer/loan /user/dgainer/peru-seq -reducers 4 -col 1 -cond 2:PE

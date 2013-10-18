@@ -1,0 +1,122 @@
+//////////////////////
+General
+//////////////////////
+
+This package provides various options for performing unsupervised clusering on text documents and then 
+using the Chow Liu algorithm to create a tree showing joint probabilities between the topics.
+
+Currently it uses the MIT-LL implementation of plsa and the vowpal wabbit implementation of lda to perform the clusterings.
+We include the MIT-LL code here - noting that the plsa_estimation file contains our code past line 224, and a number of lines have 
+been commented out in some of the other code.
+
+The scripts in the utilites folder provide some processing tools to put files into the necessary format
+
+////////////////////////
+Requirements/Building
+///////////////////////
+
+The plsa code and chow tree code can be compiled by using the compile.pl script:
+perl compile.pl
+
+To install vowpal rabbit - see the information on its github page:
+https://github.com/JohnLangford/vowpal_wabbit/wiki
+
+Vowpal wabbit requires access to boost shared libaries that may need to be added to the 
+LD_LIBRARY_PATH (bash):
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:<path>
+
+To use the language identification package, it is necessary to use a version of python that has numpy installed
+
+//////////////////////
+Input / Output
+/////////////////////
+
+The two clustering packages require a file in a slightly different format.  
+the utilities directory has tools to create and convert these.  
+
+for plsa the inout format is:
+<line (1 line per document)> = <doc ID> <word>|<count>...
+
+and for lda it is:
+
+<line (1 line per document)> = | <word Idx>:<count>...
+
+a vocabulary file (required for lda_chow)
+<line> = <word>
+where the line # matches the word index for that word
+
+The ultimate output of the code is a rudimentary tree of topics.  The full array of possible output files is:
+
+#basic plsa
+
+-features_out: list of words in corpus after pruning for tf and df cutoffs
+-summary_out: list of significant topic words
+-z_given_d_out/-z_given_d_model (plsa, plsa_chow):  probability of topics given documents matrix that is the product of the plsa em iterations
+-w_given_z_out:  probability of words given topics matrix that is the product of the plsa em iterations
+-w_out:  probability of words matrix that is the product of the plsa em iterations
+-z_out:  probability of topics matrix that is the product of the plsa em iterations
+-plsa_model:  binary representation of plsa output
+
+#additional (callable through the plsa_chow option)
+-z_given_d_post: posterior probability of topics given documents
+-z_given_w_post:  posterior probability of documents given words
+
+#lda
+-text_topics:  topic model
+-bin_topics:	binary version of topic model
+-predictions:  weighted prediction for the classification of each document into a class
+
+#chow
+files produced automatically:
+.observations:  binary reduction of topic probabilities file
+.chowtree: text representation of chow tree
+.mi: contains pairwise mutual information values between the topics
+.nb: outputs naive bayes classification results
+.dot:  dot format representation of png graphic
+.png: graphical tree
+
+
+//////////////////////
+Running
+//////////////////////
+
+The 4 basic modes of the program are:
+-plsa
+-plsa_chow
+-lda
+-lda_chow
+
+Minimal versions of the commands that use other default values are:
+./topicChow.pl -lda -input <counts> -vw <path to vowpal wabbit directory that contains the binary>
+./topicChow.pl -lda_chow -input <counts> <path to vowpal wabbit directory> -vocab <path to vocab file>
+./topicChow.pl -plsa -input <counts>
+./topicChow.pl -plsa_chow -input <counts>
+
+The other flags are (see above for output flags):
+
+general:
+-out: output prefix
+-max_iterations: Number of plsa or lda iterations to allow
+-num_topics:  number of topics to model
+
+plsa specific (can be called in plsa_chow as well):
+-tf_cutoff: term frequency cutoff (note that this uses raw values and not percent)
+-df_cutoff: document frequency cut-off (percent)
+-stop_list: provide a stop list as a list of words, one word on each line
+	
+plsa chow specific:
+-all_topic_models: creates a tree and associated files for each of the three topic models
+
+chow specific:
+-threshold:  the chow tree code takes a probabilistic matrix and converts it to binary where values over this threshold are 1's
+
+lda/lda_chow specific (see vowpal wabbit documentation)
+-vw: path to vowpal wabbit's executable directory
+-alpha
+-rho
+-minibatch
+-power_t
+-initial_t
+-bid_width
+
+//////////////////////

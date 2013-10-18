@@ -1,0 +1,55 @@
+//////////////////////
+General
+//////////////////////
+
+These scripts convert a character separated value file into the plsa or lda counts format, and convert between the two formats
+
+for plsa the inout format is:
+<line (1 line per document)> = <doc ID> <word>|<count>...
+
+and for lda it is:
+
+<line (1 line per document)> = | <word Idx>:<count>...
+
+a vocabulary file (required for lda_chow)
+<line> = <word>
+where the line # matches the word index for that word
+
+////////////////////
+Scripts
+////////////////////
+
+CSVtoVW.py:
+
+	usage:
+	./CSVtoVW <input> <column> <output> [options]
+	
+	input is a character separated value file
+	column is the zero indexed column that contains the text field
+	output is the output file
+	
+	options:
+	"--vw" print vw format
+    "--plsa" print plsa format
+    "--delim", separator character in the file - the default is tab
+    "--vocab", print a vocab file
+    "--language", use language detection to filter based on language.  this uses the mit-ll package which has been included in the directory
+	this package requires that the python versio bein used has numpy
+	
+plsa_counts_to_vw_format.pl:
+	usage:
+	./plsa_counts_to_vw_format <input> <output> <vocabulary>
+	
+	input is the plsa format counts file
+	output the vw format counts file
+	vocabulary is the vocabulary file that is output
+	
+vw_format_to_plsa_counts.pl:
+	usage:
+	./vw_format_to_plsa_counts.pl <input> <vocabulary> <output> 
+	
+	input is the vw format counts file
+	vocabulary is the vocabulary file
+	output the plsa format counts file
+	
+	

@@ -1,0 +1,115 @@
+//////////////////////
+General
+//////////////////////
+
+This package generates an HTML word cloud in which word size is
+proportional to a score.  The score is computed using a modified
+version of TF-IDF, in which term frequencies are taken from one set of
+documents (the "documents of interest") and document frequencies from
+another (the "overall collection"). 
+
+This scoring method emphasizes words that are prevalent in the
+documents of interest relative to the overall collection. (If both
+sets of documents are the same, then the score is a conventional
+TF-IDF score.)
+
+The package is designed to use Hadoop. It consists of a driver script
+(wordcloud.pl) and several helper scripts.
+
+tf_mapper.py, tf_reducer.py  -- compute term counts
+df_mapper.py, df_reducer.py  -- compute document frequencies
+tfidf_reducer.py             -- compute modified TF-IDF scores
+WordStatsToCloud.pl          -- use output of tfidf_reducer to create HTML word cloud
+WordCloud.pm                 -- word cloud HTML generation library
+
+////////////////////////
+Requirements/Building
+///////////////////////
+
+As the code consists of perl and python scripts there is no build required,
+outside of hadoop.  This does require an appropriate version of hadoop streaming. 
+
+We used the mit-ll package to detect language - this is located in their xdata git repository.
+To work with the scripts the langid directory should be copied to the working directory - either
+as is or as a zip file.  The script will create a zip file from the directory and rename it as
+'langid.mod'
+
+Running the language detection script requires a version of python that has numpy installed.
+if the -nolang option is selected, this is not necessary.  If a non-defualt version of python
+is necessary - this can be specified with the -python option (keeping in mind that the executable/alias must
+work on all machines in the cluster)
+
+The csv parsing utility located in 'utilities' requires the appropriate hadoop jars and has a build script
+
+//////////////////////
+Input / Output
+/////////////////////
+
+The input format currently supported is a sequence file where the text "documents" comprise the key or value while
+the other is empty or null.  The utilities folder contains a utility that will parse a csv file into this format
+
+The output is an html word cloud
+
+//////////////////////
+Running
+//////////////////////
+
+The perl script takes the following non-flagged parameters (in order):
+hdfs-path-to-input-docs (required):
+	an HDFS directory or glob containing the documents of interest
+hdfs-path-to-corpus (required)
+	an HDFS directory or glob containing the overall collection
+hdfs-output-dir (required)
+	directory to store output in folders /tc /dc /tfidf
+
+And the following flagged parameters:
+
+-jar (required - no default)
+	path to the hadoop streaming jar
+-out (optional - defaults to 'wordcloud')
+	base filename for the output wordcloud
+-n (optional - defaults to 25)
+	#of terms in the wordcloud
+-p (optional - defaults to 'python')
+	python command for the streaming job to call
+-language (optional - defaults to 'en')
+	will only consider passages in the supplied language - this uses mit-ll's language detection code
+-nopp (optional)
+	turn off text pre-processing - currently this lowercases all terms, removes leading and trailing punctuation and possessives
+	and limits words to letters and internal hyphens or apostraphes
+-nolang (optional)
+	turn off language detection
+-stop (optional - no default)
+	provide a stoplist
+-tf (optional - defaults to count)
+	allows for the tf statistic to be 'log' or 'boolean'
+	The default is for this to be the number of occurences of a word in a document
+	'log' instead uses 1 + log(occurences)
+	'boolean' uses 1 where the document is present
+-df (optional - defaults to std)
+	the only option is:
+	'scale' which takes the square root of the df value - this seems to improve relevance on the kiva data
+
+This is the syntax of a minimal call:
+
+/wordcloud.pl <tf-input> <df-input> <hdfs-output> -jar <location of streaming jar>
+
+
+If a separate process for calculating TF-IDF scores, term frequencies,
+and document frequencies is available, the WordStatsToCloud.pl script
+may be used by itself. It accepts an input file with four
+tab-delimited columns: score, term, term frequency, and document frequency. 
+Refer to its usage message for additional options.
+
+//////////////////////////
+Example
+/////////////////////////
+
+The following call was used to create the peru sample in the /samples directory
+
+wordcloud.pl /user/dgainer/ye-seq /user/dgainer/loan-seq /user/dgainer/ye-stats \
+-jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.2.0.jar \
+-python /opt/Python-2.7.3-x86_64/bin/python \
+-nolang -tf 'log' -df 'scale' \
+-out ye-against-all \
+-stop stop_list_kiva.txt
