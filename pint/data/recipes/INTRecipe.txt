@@ -1,4 +1,0 @@
-ID	Name
-3	Nitric Acid Outdoors
-4	HCl Acid Indoors
-
